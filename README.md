@@ -1,46 +1,70 @@
-# Reddit Data Engineering Project
+# Data Pipeline with Reddit, Airflow, Celery, Postgres, S3, AWS Glue, Athena, and Redshift
+
+This project provides a comprehensive data pipeline solution to extract, transform, and load (ETL) Reddit data into a Redshift data warehouse. The pipeline leverages a combination of tools and services including Apache Airflow, Celery, PostgreSQL, Amazon S3, AWS Glue, Amazon Athena, and Amazon Redshift.
 
 ## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Features](#features)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Project Structure](#project-structure)
-6. [Contributing](#contributing)
-7. [License](#license)
+1. [Overview](#overview)
+2. [Architecture](#architecture)
+3. [Prerequisites](#prerequisites)
+4. [System Setup](#system-setup)
+5. [Usage](#usage)
+6. [Project Structure](#project-structure)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Acknowledgements](#acknowledgements)
 
-## Project Overview
-This project is designed to ingest, process, and analyze data from Reddit using modern data engineering techniques. The goal is to build a robust ETL pipeline that extracts data, transforms it into a useful format, and loads it into a data warehouse for further analysis.
+## Overview
+The pipeline is designed to:
+- Extract data from Reddit using its API.
+- Store the raw data into an S3 bucket from Airflow.
+- Transform the data using AWS Glue and Amazon Athena.
+- Load the transformed data into Amazon Redshift for analytics and querying.
 
-## Features
-- **Data Ingestion:** Extract data from Reddit's API.
-- **Data Transformation:** Clean and preprocess the data using Python.
-- **Data Loading:** Load the transformed data into a data warehouse.
-- **Scheduling:** Use Apache Airflow for scheduling and orchestrating ETL jobs.
-- **Docker Support:** Containerized environment for easy deployment.
+## Architecture
+![Architecture Diagram](path/to/Screenshot 2024-07-16 at 12.18.43 PM.png)
 
-## Installation
-To set up this project on your local machine, follow these steps:
+1. **Reddit API:** Source of the data.
+2. **Apache Airflow & Celery:** Orchestrates the ETL process and manages task distribution.
+3. **PostgreSQL:** Temporary storage and metadata management.
+4. **Amazon S3:** Raw data storage.
+5. **AWS Glue:** Data cataloging and ETL jobs.
+6. **Amazon Athena:** SQL-based data transformation.
+7. **Amazon Redshift:** Data warehousing and analytics.
 
+## Prerequisites
+- AWS Account with appropriate permissions for S3, Glue, Athena, and Redshift.
+- Reddit API credentials.
+- Docker Installation
+- Python 3.9 or higher
+
+## System Setup
 1. **Clone the Repository:**
     ```bash
     git clone https://github.com/Akramash/reddit-data-eng.git
     cd reddit-data-eng
     ```
 
-2. **Install Dependencies:**
+2. **Create a Virtual Environment:**
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+
+3. **Install Dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
 
-3. **Set Up the Environment:**
-    Ensure you have Docker installed. Then, run:
-    ```bash
-    docker-compose up
-    ```
-
 4. **Configure Environment Variables:**
     Create a `.env` file and set the necessary environment variables as specified in `airflow.env`.
+
+5. **Starting the Containers:**
+    ```bash
+    docker-compose up -d
+    ```
+
+6. **Launch the Airflow Web UI:**
+    Open your browser and go to `http://localhost:8080`.
 
 ## Usage
 1. **Start Airflow:**
@@ -67,3 +91,6 @@ We welcome contributions! Please read our [contributing guidelines](CONTRIBUTING
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+This project was greatly inspired and guided by the video ["Data Engineering Project: Reddit Data Pipeline with Airflow, AWS"](https://youtu.be/LSlt6iVI_9Y?si=qfvF1EvqfVTU7xkr) by Code With Yu. Many thanks to the creator for providing such a comprehensive tutorial.
