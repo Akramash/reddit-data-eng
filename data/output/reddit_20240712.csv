@@ -1,0 +1,142 @@
+id,title,selftext,score,num_comments,author,created_utc,url,upvote_ratio,over_18,edited,spoiler,stickied
+1e1fj72,Things you learned embarrassingly late?,"yaml is just more readable dictionaries/unserialized json. I've been reading and writing yaml files for years and I knew that they were just key/value pairs but I had never made the mental connection between the indentation levels, nested dictionaries, and ""-"" denoting a list.  
+
+I just kind of..... knew how to write yaml based on vibes.",67,39,bjogc42069,2024-07-12 11:41:05,https://www.reddit.com/r/dataengineering/comments/1e1fj72/things_you_learned_embarrassingly_late/,0,False,False,False,False
+1e14hpe,What Are the Biggest Challenges in Data Engineering Today? Let's Discuss!,"I've been working in the data industry for over 20 years, and I've noticed that many companies lack robust data governance and quality processes. They seem to prioritize building pipelines, acquiring and processing data, and delivering it to the business, without focusing on governance and quality. This continues to be a major challenge in our industry. What other significant challenges do you think we are facing today? Let's discuss. ",50,47,New-Ship-5404,2024-07-12 00:46:27,https://www.reddit.com/r/dataengineering/comments/1e14hpe/what_are_the_biggest_challenges_in_data/,0,False,False,False,False
+1e19qzs,Equivalent of “micro partitioning” in Databricks?,"I was told Snowflake is inherently faster query than Databricks because it deploys micro partitioning. At first glance this sounds reasonable because it would allow to very quickly select the right data
+
+However, I know enough of engineering that there is always a trade off. Also, I can’t believe Databricks would let such as an “obvious” performance benefit slip 
+
+So, what’s the equivalent of micro partitioning in Databricks? Or does it actually not even matter as much as I was told? Or is it all true?",15,6,thesumofall,2024-07-12 05:28:55,https://www.reddit.com/r/dataengineering/comments/1e19qzs/equivalent_of_micro_partitioning_in_databricks/,0,False,False,False,False
+1e1ht0r,Most data goes underutilized,"The quote goes “90% of data is unstructured” meaning it’s probably not being used
+
+In curious, what percentage of data not being used do you think exists in your organization?",10,20,chrisgarzon19,2024-07-12 13:33:17,https://www.reddit.com/r/dataengineering/comments/1e1ht0r/most_data_goes_underutilized/,0,False,False,False,False
+1e19479,confused between AWS vs AZURE for data engineer role?no experience in cloud ☁️,"Hi guys, i have been working as SDE-1 (3.2years)most of time i have done web scrapping, marking pipelines. done some small projects. I am planning to pivot to Data engineer role as it matches with my current job/skills. I know sql and python. I am learning Pyspark . Only thing bothering me is choosing right cloud. I know somewhat aws i have done aws cloud practitioner. I need to prepare quickly and get hands-on experience.
+",12,7,ClearMushroom4119,2024-07-12 04:51:19,https://www.reddit.com/r/dataengineering/comments/1e19479/confused_between_aws_vs_azure_for_data_engineer/,0,False,False,False,False
+1e1iuxt,How does ClickHouse and similar compare to Snowflake?,"I am using Snowflake at work to run a datawarehouse, unfortunately I keep getting asked to make it closer and closer to real time, but the costs just balloon.
+
+  
+I see there are some competitors which differentiate that they allow more real time analytics, but how do they do this? How is Clickhouse fundamentally different to Snowflake/BigQuery et al?
+
+  
+There must be some trade-off they have made, otherwise surely it would be no different? 
+
+  
+Reading their website leaves me none the wiser.",7,5,wallyflops,2024-07-12 14:20:08,https://www.reddit.com/r/dataengineering/comments/1e1iuxt/how_does_clickhouse_and_similar_compare_to/,0,False,False,False,False
+1e1a4h5,The feature store is a specialized data warehouse that make temporal dat modelling easy,"
+Hi. I am the organizer of the feature store conference and CEO of Hopsworks and frequently hear - i have a data warehouse, dont need a feature store.
+
+In data engineering terms, the feature store provides guard rails that enable data scientists to do dimension modeling (facts are labels/targets, dimensions arw features) in Python, and create point in time consistent training data from a mix of type 0 and type 2 SCD tables using ASOF LEFT JOINs (using easy Python API calls). Then, there is also the real-time APIs in a feature store, but they are not important if you only build batch AI systems.
+
+Reference
+https://www.hopsworks.ai/post/the-feature-store-makes-your-data-warehouse-easy-to-use-for-ai",6,0,jpdowlin,2024-07-12 05:51:20,https://www.reddit.com/r/dataengineering/comments/1e1a4h5/the_feature_store_is_a_specialized_data_warehouse/,0,False,False,False,False
+1e1jfiq,Replace Databricks Spark Jobs (using Delta) with Polars,,4,1,dataengineeringdude,2024-07-12 14:45:04,https://dataengineeringcentral.substack.com/p/replace-databricks-spark-jobs-using,1,False,False,False,False
+1e1fgrz,Keeping it no longer than 9-6 as data engineer / devops,"Given these two fields involve large amounts of time spent on either data processing or infrastructure deployment (but specially data processing), I often find myself with empty spaces of work during the day which I use to learn new stuff or optimize what we already have, but other than that, it's all about waiting. Then, because we need to take advantage of processing time during the night or weekends, I find myself logging in at night or during the weekends just to check data processes finished, then I run more processes. I know data processing should be fully automated, but we are at the stage of a data migration project where we do both massive data load from the past + ETL automation of current, daily data. So how do you manage this kind of work? I find it hard to switch off, but given the amount of hours I work daily are low, I feel the responsibility to spend some hours at night or weekends to compensate the empty work hours during the day. My colleagues do so. We don't work for a startup nor a consultancy, it is a large corporation (a bank) which I mainly joined because of the work-life balance it was supposed to offer. But I guess that doesn't apply to data engineering or devops. am I missing something? Do you think we managed the timelines badly? or these problems are inherent to the specialization, regardless of the project, industry or good/bad time management?",6,3,keiskn,2024-07-12 11:37:21,https://www.reddit.com/r/dataengineering/comments/1e1fgrz/keeping_it_no_longer_than_96_as_data_engineer/,0,False,False,False,False
+1e18bfa," Considering Converting Snowflake Native Tables to Snowflake-Managed Iceberg on S3 - Cost and Capability Concerns
+
+","Hi everyone,
+
+We currently use Snowflake and have several Snowflake native tables. For certain business processes, we snapshot these tables daily, and their size has been growing significantly. We now have 10 to 20 tables, each around 40TB in size.
+
+With the recent release of Snowflake's support for Iceberg tables, I'm considering converting these tables to Snowflake-managed Iceberg tables and using S3 for storage. I'm trying to determine if this change will decrease our costs and how much savings we can expect. Additionally, I want to ensure that we don't lose any of Snowflake's capabilities like time travel, failsafe, etc.
+
+Has anyone here made a similar transition? What was your experience regarding cost savings and feature retention and any issues with iceberg table? Any insights or advice would be greatly appreciated!
+
+Thanks in advance!",4,7,futuresapien161803,2024-07-12 04:05:57,https://www.reddit.com/r/dataengineering/comments/1e18bfa/considering_converting_snowflake_native_tables_to/,1,False,False,False,False
+1e195do,RDS to RDS ETL,"
+I have a use case to implement where AWS RDS have few tables which have a blob column containing JSON. I need to parse the json and populate data model that is deployed on another RDS. 
+
+I am bound to use AWS Glue and RDS as destination. Please recommend best possible ways to achieve:
+
+- How to do Incremental Loads as JSON gets upserted in source?
+- Transformations in Glue
+- Extraction and Loading
+- Orchestration / Triggering.
+
+
+Any other suggestions are welcomed.",3,6,saadcarnot,2024-07-12 04:53:20,https://www.reddit.com/r/dataengineering/comments/1e195do/rds_to_rds_etl/,0,False,False,False,False
+1e1jpsy,Best lakehouse vs data lake implementation & tools?,"EDIT: I’m asking for help cos I’m not a data engineer. If nothing I said makes sense then your correction would be appreciated. Don’t be mean for no reason. Thanks!
+
+TGIF fellow bright minded data engineers!
+
+For those of you who’ve built or maintained a data lake/lakehouse for your company, what method & tools have you found works best for streamlined data access and transformation that seamlessly handles structured, semi-structured and unstructured data?
+
+I’ve narrowed my search to 4 solutions;
+- MS Fabric (since we already use MS tools) + open source tools where fabric can’t cover.
+- Snowflake + Terraform
+- Apache Iceberg + spark etc on S3
+- Building custom APIs
+
+Seems I’ll be the only one to implement this maybe with the help of my manager. So what solution do you recommend whether listed above or not that would not only be efficient enough to handle lots of big data in an enterprise but also be feasible for me to build as the main developer? My development skills aren’t that great either this has been a learning curve for me cos I’m a systems analyst. Thanks for your help!",3,14,Acrobatic_Sample_552,2024-07-12 14:57:12,https://www.reddit.com/r/dataengineering/comments/1e1jpsy/best_lakehouse_vs_data_lake_implementation_tools/,0,False,False,False,False
+1e1dprc,BigQuery equivalent of Snowflake streams and tasks,"Hello,  
+We currently have setup an event-based architecture with Snowflake to prevent the need of an orchestration tool (e.g. airflow). This means we heavily depend on the AWS SNS/SQS integration with Snowflake as well as streams and tasks. Is there something similar to that available on BigQuery?
+
+I did some research, but the latest I could find on that was about a year ago and developments are going very rapidly in the warehouse domain these days.",2,0,limartje,2024-07-12 09:49:55,https://www.reddit.com/r/dataengineering/comments/1e1dprc/bigquery_equivalent_of_snowflake_streams_and_tasks/,0,False,False,False,False
+1e1byyj,Seeking Tool Recommendations for Visualizing Data Flows and Attribute-Level Mappings in a Complex Data Pipeline,"I'm working on a complex project where I need to build a data pipeline and model data from diverse sources. The modelling part is kind of new territory for me since in the past I was mostly provided with a target model for which I was then building the pipeline. The project involves about 20-30 data sources, including LDAP directories, MSSQL databases, Excel files etc.
+
+I want to visualize data flows at the attribute level. For instance, I have:
+
+* Data Source 1: Table A (columns ca1, ca2, ca3)
+* Data Source 2: Table B (columns cb1, cb2, cb3)
+* Data Source C: Table C (combines data from A and B and also generates new data)
+
+I aim to create Table D by pulling specific columns from Tables A, B, and C and want to visualize these mappings clearly.
+
+Can you recommend tools for this kind of visualization, preferably ones that can read information from a JSON file? Any tips on tackling this problem are appreciated.",2,1,Airwave8,2024-07-12 07:50:38,https://www.reddit.com/r/dataengineering/comments/1e1byyj/seeking_tool_recommendations_for_visualizing_data/,0,False,False,False,False
+1e1ot9b,Self service data modeling,"Hi,
+our stack is snowflake, dbt and power bi.
+
+We need to provide our non technical users a self service tool to allow them to build there own ""custom"" data models, but still we would like to have this models part of dbt and version control them.
+
+Note that rhe users are not experienced in SQL.
+
+any suggestions and did anyone have the same use case?
+
+",1,2,nobel-001,2024-07-12 18:27:22,https://www.reddit.com/r/dataengineering/comments/1e1ot9b/self_service_data_modeling/,1,False,False,False,False
+1e1np5k,Curious questions ,"I am been working as a software Engineer (backend)
+Like for 2 years now I know the reason tech jobs has high salary obviously it's time spend in meeting ,relases , issue discussion, etc etc 
+n I had to work on ETL this is from like file upload on the software I was working on got came accross data engineering stuff finding solution for the issue related to ETL implementation 
+
+
+Now I'm interested to learn data engineering 
+
+Can you guys please put some pros or cons 
+
+Like is there will be any difference if I am a data engineer and I'm a software Engineer 
+The good things and bad things 
+
+(More intrested to listen from the person who has shifted from software backend engineer to data engineer ) 
+",1,3,Ok-Replacement-5094,2024-07-12 17:41:13,https://www.reddit.com/r/dataengineering/comments/1e1np5k/curious_questions/,1,False,False,False,False
+1e1l3g2,Airflow Architecture recommendation: 1 large cluster or multiple small ones,"Hello Everyone. Wanted to elicit recommendations/suggestion on how to scale Airflow. 
+
+
+Current setup: More than 200 Airflow instances (on-prem Kubernetes containers), persistent Postgres DB on VMs, DAGs stored on S3 compliant storage(on-prem). Basically every team/data scientist has their own instance. Some users are running small batch jobs within Airflow, for any larger jobs we are pushing them to move the processing to external containers and use Airflow only for orchestration as intended. 
+
+
+Current problems: upgrades/patching is more complex, capacity utilization not efficient, monitoring and support is also more effort intensive.
+
+
+We are evaluating moving to a common large cluster instead of this distributed approach. Wanted to hear more from people here of potential pitfalls/issues or benefits of the move. 
+
+Some things I can think of:
+While resource utilization will be more efficient, making sure we are setting up resource/capacity bounderies for users/teams to not step on each others' toes in a shared infra will be a challenge. 
+
+Everyone will need to use a common version of dependencies (I am not sure if we can have multiple versions of libs in same Airflow cluster). 
+
+Single point of failure, one cluster so any issue with it will impact everyone. 
+
+Appreciate any suggestions on this. ",1,1,bringmeback0,2024-07-12 15:54:29,https://www.reddit.com/r/dataengineering/comments/1e1l3g2/airflow_architecture_recommendation_1_large/,1,False,False,False,False
+1e1jcy4,Pinging REST API with JWT authentication in Azure Data Factory?,"Hello all, I am running into some issues setting up a pipeline to ping a REST API that uses a signed JWS as a parameter for the post request.
+
+At the moment, I am generating the signed JWS through a Notebook activity in Python, setting the signed notebook output to a variable and pass it to the Web activity for the post request. But I am getting an error that says ""Invalid Base64Url protected header"".
+
+I am able to ping this API with the same parameters (token ID, token secret, etc.) from my local machine. In the past I have always done the API calls with Python through ADB, but that is not possible in this case due to reasons I can't get into.
+
+Any help is much appreciated. I am not an API expert, so if I am being confusing please let me know.",1,1,classicjuniper,2024-07-12 14:41:50,https://www.reddit.com/r/dataengineering/comments/1e1jcy4/pinging_rest_api_with_jwt_authentication_in_azure/,0,False,False,False,False
+1e1ikc4,Question about implementing ETL for web scraping,"Hello, guys! I'm making a web scraping project for my data analyst portfolio. But I'm not sure about the correctness of the implementation.  
+I scrape data, then save it as a csv file, then load data from the csv to a Pandas DataFrame and clean it, then load it into a database.   
+But I don't do standardization of some fields in Python (for example, if there are cities and regions in the ""location"" field and I need to impute cities with the appropriate region), I do it using Power Query (the Power BI transformation tool), and then I build report in Power BI.  
+Is that ok, or should every transformation be done strictly at the Transform step (in Python in my case)?  
+Sorry for my English.",1,4,Alert-Implement-1480,2024-07-12 14:07:14,https://www.reddit.com/r/dataengineering/comments/1e1ikc4/question_about_implementing_etl_for_web_scraping/,0,False,False,False,False
+1e130yi,Need help with parsing Json file from S3 to DW, I am running a talend job to send the file from S3 to a table in DW. it is a json file. After opening the connections. I am using tS3Get to load the file into tFileInputJson. In between  this what is happening is that the file from S3 is being stored locally on my computer. This cannot work in  Production Talend environment. How can I do this in air using dynamic link of the server using which components?,1,1,Equivalent_Ant1426,2024-07-11 23:33:51,https://www.reddit.com/r/dataengineering/comments/1e130yi/need_help_with_parsing_json_file_from_s3_to_dw/,0,False,False,False,False
+1e1momj,Databases Deconstructed: The Value of Data Lakehouses and Table Formats,,0,0,AMDataLake,2024-07-12 16:59:26,https://amdatalakehouse.substack.com/p/databases-deconstructed-the-value,0,False,False,False,False
