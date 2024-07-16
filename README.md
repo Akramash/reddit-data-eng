@@ -21,7 +21,7 @@ The pipeline is designed to:
 - Load the transformed data into Amazon Redshift for analytics and querying.
 
 ## Architecture
-![Architecture Diagram](path/to/Screenshot 2024-07-16 at 12.18.43 PM.png)
+![Architecture Diagram](https://github.com/Akramash/reddit-data-eng/blob/main/Screenshot%202024-07-16%20at%2012.18.43%20PM.png)
 
 1. **Reddit API:** Source of the data.
 2. **Apache Airflow & Celery:** Orchestrates the ETL process and manages task distribution.
